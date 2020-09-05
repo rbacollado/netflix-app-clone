@@ -22,9 +22,13 @@ function Nav() {
         src="https://image.tmdb.org/t/p/original/wwemzKWzjKYJFfCeiB57q3r4Bcm.svg"
         alt="Netflix"
       />
+      <p className={`nav__author ${show && "nav__authorShow"}`}>
+        <a href="https://github.com/rbacollado">By rbacollado</a>
+      </p>
+
       <img
         className="nav__avatar"
-        src="https://i.pinimg.com/originals/0d/dc/ca/0ddccae723d85a703b798a5e682c23c1.png"
+        src="https://mir-s3-cdn-cf.behance.net/project_modules/disp/366be133850498.56ba69ac36858.png"
         alt="Avatar"
       />
     </div>

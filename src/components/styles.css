@@ -7,7 +7,7 @@
   z-index: 1;
   height: 30px;
   transition: all 0.5s ease-out;
-  display: flex;
+  display: flex !important;
   justify-content: space-between;
 }
 .nav__bar {
@@ -16,8 +16,8 @@
 }
 .nav__logo {
   position: fixed;
-  width: 80px;
-  left: 20px;
+  width: 100px;
+  left: 30px;
   object-fit: contain;
 }
 .nav__avatar {
@@ -26,6 +26,21 @@
   width: 30px;
   object-fit: contain;
   margin-right: 20px;
+}
+.nav__author > a {
+  visibility: hidden;
+}
+.nav__authorShow {
+  padding-top: 5px;
+  position: fixed;
+  right: 65px;
+  transition: all 0.5s ease-out;
+}
+.nav__authorShow > a {
+  transition: all 0.5s ease-in;
+  text-decoration: none;
+  color: #fafafa;
+  visibility: visible;
 }
 
 /* row-styles */
@@ -40,6 +55,7 @@
   overflow-y: hidden;
   padding: 20px;
   align-items: center;
+  margin-right: 10px;
 }
 /* hide scrollbar in browsers */
 .row__posters::-webkit-scrollbar {
@@ -78,29 +94,28 @@
   font-weight: 800;
   padding-bottom: 10px;
 }
-.banner__button {
+.banner__buttons > button {
   cursor: pointer;
   color: #fff;
   outline: none;
   border: none;
-  font-weight: 700;
-  border-radius: 0.2vw;
+  font-weight: 500;
   padding-left: 2rem;
   padding-right: 2rem;
   margin-right: 1rem;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
   background-color: rgba(51, 51, 51, 0.5);
-  padding-bottom: 0.5rem;
 }
-.banner__button:hover {
+
+button:hover {
   background-color: rgba(89, 88, 89, 0.7);
   transition: all 0.3s;
 }
 .banner__description {
   line-height: 1.3;
   padding-top: 15px;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   max-width: 360px;
   height: 80px;
 }

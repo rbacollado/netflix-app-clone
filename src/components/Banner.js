@@ -3,6 +3,9 @@ import "./styles.css";
 import axios from "../axios";
 import requests from "../requests";
 
+import Play from "@material-ui/icons/PlayArrow";
+import Add from "@material-ui/icons/Add";
+
 function Banner() {
   const [movie, setMovie] = useState("");
   const imgUrl = "https://image.tmdb.org/t/p/original/";
@@ -40,8 +43,12 @@ function Banner() {
           {movie?.name || movie?.title || movie?.original_name}
         </h1>
         <div className="banner__buttons">
-          <button className="banner__button">Play</button>
-          <button className="banner__button">My list</button>
+          <button>
+            <span> Play </span>
+          </button>
+          <button>
+            <span> My List</span>
+          </button>
         </div>
         <h1 className="banner__description">
           {truncate(movie?.overview, 200)}
